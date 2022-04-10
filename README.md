@@ -8,13 +8,13 @@ Read and customize `./create.sh`.  Then run it.
 ## Motivation
 
 Could be used to run docker and docker-compose workloads on CI systems that do
-not give access to the host's docker engine, but that *do* cache the
-docker-in-docker image.  For these workloads, we ask the CI system to run our
-code against a docker-in-docker container.
+not give access to the host's docker engine, but that *do* cache the images they
+run.  We can ask the CI system to run our docker-in-docker container, and
+run our tests against that container.
 
-The off-the-shelf docker-in-docker image starts with an empty cache every time.
-With this experiment, you can pre-populate the layer cache with the images used
-by your tests, hopefully to speed up your workflows.
+Docker's official docker-in-docker image works well, but it starts with an empty
+cache every time. With this experiment, we can pre-populate the layer cache
+with the images used by our tests, hopefully to speed up your workflows.
 
 ## Expectation
 
