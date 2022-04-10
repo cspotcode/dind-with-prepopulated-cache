@@ -1,0 +1,3 @@
+FROM dind-with-cache-without-volume
+VOLUME /var/lib/docker2
+
